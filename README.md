@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ParineetaDeb
 - 👀 I’m interested in coding and projects 
-- 🌱 I’m currently learning C++
+- 🌱 I’m currently learning Python
 - 💞️ I’m looking to collaborate on online coding projects and practice 
 - 📫 How to reach me (e-mail id)debparineeta@gmail.com
 
