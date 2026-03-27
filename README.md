@@ -22,4 +22,4 @@ Detailed technical documentation for this project can be found below:
 ## 🛠️ Tech Stack
 * **Language:** Python
 * **Database:** SQLite3
-* **Security:** Cryptography (AES-256, SHA-256, PBKDF2)
+* **Security:** Cryptography (AES-256, Argon2id, PBKDF2)
