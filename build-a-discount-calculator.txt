@@ -1,0 +1,29 @@
+** start of main.py **
+
+def apply_discount(price, discount): #1.2. define a function apply_discount
+
+    #3. Type check for price
+    if not isinstance(price, (int, float)):
+        return "The price should be a number"
+    
+    #4. Type check for discount
+    if not isinstance(discount, (int, float)):
+        return "The discount should be a number"
+    
+    #5. Value check for price
+    if price <= 0:
+        return "The price should be greater than 0"
+    
+    #6. Value check for discount range
+    if discount < 0 or discount > 100:
+        return "The discount should be between 0 and 100"
+    
+    #7. Logic: Calculate the final price
+    # Formula: Price - (Price * (Discount / 100)) -> final_price = price - (price * discount/100) -> price is the common factor -> final_price = price * (1 - discount/100)
+    #8. final price after applying the discount
+    final_price = price * (1 - discount / 100)
+    
+    return final_price
+
+** end of main.py **
+

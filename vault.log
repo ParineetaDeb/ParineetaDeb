@@ -1,0 +1,118 @@
+2026-03-27 18:38:04,591 - INFO - ==================================================
+2026-03-27 18:38:04,592 - INFO - SentinelsVault application started.
+2026-03-27 18:38:04,827 - INFO - AuthManager initialized.
+2026-03-27 18:38:04,880 - INFO - Database tables initialized.
+2026-03-27 18:38:04,881 - INFO - StorageEngine initialized. Database connected.
+2026-03-27 18:42:15,971 - INFO - ==================================================
+2026-03-27 18:42:15,971 - INFO - SentinelsVault application started.
+2026-03-27 18:42:16,134 - INFO - AuthManager initialized.
+2026-03-27 18:42:16,137 - INFO - Database tables initialized.
+2026-03-27 18:42:16,137 - INFO - StorageEngine initialized. Database connected.
+2026-03-27 18:46:16,211 - INFO - ==================================================
+2026-03-27 18:46:16,224 - INFO - SentinelsVault Session Started.
+2026-03-27 18:46:16,407 - INFO - AuthManager initialized.
+2026-03-27 18:46:16,410 - INFO - Database tables initialized.
+2026-03-27 18:46:16,411 - INFO - StorageEngine initialized. Database connected.
+2026-03-27 18:46:16,436 - ERROR - Application crashed during execution: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2026-03-27 18:46:16,436 - INFO - SentinelsVault session ended.
+2026-03-27 18:46:16,437 - INFO - ==================================================
+2026-03-27 18:47:01,004 - INFO - ==================================================
+2026-03-27 18:47:01,004 - INFO - SentinelsVault Session Started.
+2026-03-27 18:47:01,182 - INFO - AuthManager initialized.
+2026-03-27 18:47:01,188 - INFO - Database tables initialized.
+2026-03-27 18:47:01,188 - INFO - StorageEngine initialized. Database connected.
+2026-03-27 18:47:01,208 - ERROR - Application crashed during execution: 'width' and 'height' arguments must be passed to the constructor of the widget, not the place method
+2026-03-27 18:47:01,208 - INFO - SentinelsVault session ended.
+2026-03-27 18:47:01,208 - INFO - ==================================================
+2026-03-27 18:52:36,792 - INFO - ==================================================
+2026-03-27 18:52:36,792 - INFO - SentinelsVault Session Started.
+2026-03-27 18:52:36,798 - ERROR - Application crashed during execution: unindent does not match any outer indentation level (app_ui.py, line 162)
+2026-03-27 18:52:36,798 - INFO - SentinelsVault session ended.
+2026-03-27 18:52:36,798 - INFO - ==================================================
+2026-03-27 20:43:48,648 - INFO - ==================================================
+2026-03-27 20:43:48,648 - INFO - SentinelsVault Session Started.
+2026-03-27 20:43:48,748 - INFO - Database schema verified/created.
+2026-03-27 20:43:48,748 - INFO - StorageEngine initialized successfully.
+2026-03-27 20:43:48,771 - INFO - GUI Initialized successfully.
+2026-03-27 20:43:55,486 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-03-27 20:44:00,732 - INFO - SentinelsVault session ended.
+2026-03-27 20:44:00,732 - INFO - ==================================================
+2026-03-27 20:46:11,939 - INFO - ==================================================
+2026-03-27 20:46:11,940 - INFO - SentinelsVault Session Started.
+2026-03-27 20:46:12,031 - INFO - Database schema verified/created.
+2026-03-27 20:46:12,031 - INFO - StorageEngine initialized successfully.
+2026-03-27 20:46:12,052 - INFO - GUI Initialized successfully.
+2026-03-27 20:46:16,971 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-03-27 20:46:26,363 - INFO - SentinelsVault session ended.
+2026-03-27 20:46:26,363 - INFO - ==================================================
+2026-03-27 20:46:52,373 - INFO - ==================================================
+2026-03-27 20:46:52,373 - INFO - SentinelsVault Session Started.
+2026-03-27 20:46:52,465 - INFO - Database schema verified/created.
+2026-03-27 20:46:52,465 - INFO - StorageEngine initialized successfully.
+2026-03-27 20:46:52,485 - INFO - GUI Initialized successfully.
+2026-03-27 20:46:55,719 - INFO - SentinelsVault session ended.
+2026-03-27 20:46:55,719 - INFO - ==================================================
+2026-03-28 13:42:38,976 - INFO - ==================================================
+2026-03-28 13:42:38,976 - INFO - SentinelsVault Session Started.
+2026-03-28 13:42:39,190 - INFO - Database schema verified/created.
+2026-03-28 13:42:39,191 - INFO - StorageEngine initialized successfully.
+2026-03-28 13:42:39,240 - INFO - GUI Initialized successfully.
+2026-03-28 13:42:46,704 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-03-28 13:43:01,043 - INFO - SentinelsVault session ended.
+2026-03-28 13:43:01,043 - INFO - ==================================================
+2026-03-28 13:48:06,383 - INFO - ==================================================
+2026-03-28 13:48:06,384 - INFO - SentinelsVault Session Started.
+2026-03-28 13:48:06,587 - INFO - Database schema verified/created.
+2026-03-28 13:48:06,588 - INFO - StorageEngine initialized successfully.
+2026-03-28 13:48:06,621 - INFO - GUI Initialized successfully.
+2026-03-28 13:48:13,358 - INFO - SentinelsVault session ended.
+2026-03-28 13:48:13,358 - INFO - ==================================================
+2026-03-28 13:48:51,144 - INFO - ==================================================
+2026-03-28 13:48:51,144 - INFO - SentinelsVault Session Started.
+2026-03-28 13:48:51,334 - INFO - Database schema verified/created.
+2026-03-28 13:48:51,334 - INFO - StorageEngine initialized successfully.
+2026-03-28 13:48:51,367 - INFO - GUI Initialized successfully.
+2026-03-28 13:48:58,467 - INFO - SentinelsVault session ended.
+2026-03-28 13:48:58,467 - INFO - ==================================================
+2026-03-28 13:51:44,519 - INFO - ==================================================
+2026-03-28 13:51:44,520 - INFO - SentinelsVault Session Started.
+2026-03-28 13:51:44,726 - INFO - Database schema verified/created.
+2026-03-28 13:51:44,726 - INFO - StorageEngine initialized successfully.
+2026-03-28 13:51:44,762 - INFO - GUI Initialized successfully.
+2026-03-28 13:51:48,485 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-03-28 13:51:58,412 - INFO - SentinelsVault session ended.
+2026-03-28 13:51:58,412 - INFO - ==================================================
+2026-03-28 18:16:47,057 - INFO - ==================================================
+2026-03-28 18:16:47,057 - INFO - SentinelsVault session started.
+2026-03-28 18:16:47,160 - INFO - Database schema verified/created.
+2026-03-28 18:16:47,160 - INFO - StorageEngine initialized successfully.
+2026-03-28 18:16:47,186 - INFO - GUI launched successfully.
+2026-03-28 18:16:50,204 - INFO - SentinelsVault session ended.
+2026-03-28 18:16:50,204 - INFO - ==================================================
+2026-03-28 19:03:33,401 - INFO - ==================================================
+2026-03-28 19:03:33,401 - INFO - SentinelsVault session started.
+2026-03-28 19:03:33,532 - INFO - AuthManager initialized with Argon2id configuration.
+2026-03-28 19:03:33,534 - INFO - Database schema verified/created.
+2026-03-28 19:03:33,534 - INFO - StorageEngine initialized successfully.
+2026-03-28 19:03:33,876 - INFO - GUI launched successfully.
+2026-03-28 19:03:49,911 - INFO - Master password verification successful.
+2026-03-28 19:03:50,071 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-03-28 19:03:50,073 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-03-28 19:04:10,254 - INFO - Master encryption key securely wiped from RAM.
+2026-03-28 19:04:14,246 - INFO - Master password verification successful.
+2026-03-28 19:04:14,407 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-03-28 19:04:14,407 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-03-28 19:04:51,507 - INFO - SentinelsVault session ended.
+2026-03-28 19:04:51,507 - INFO - ==================================================
+2026-03-31 14:35:50,255 - INFO - ==================================================
+2026-03-31 14:35:50,255 - INFO - SentinelsVault session started.
+2026-03-31 14:35:50,452 - INFO - AuthManager initialized with Argon2id configuration.
+2026-03-31 14:35:50,458 - INFO - Database schema verified/created. All 3 tables ready.
+2026-03-31 14:35:50,458 - INFO - StorageEngine initialized successfully.
+2026-03-31 14:35:51,075 - INFO - GUI launched successfully.
+2026-03-31 14:35:55,488 - INFO - Master password verification successful.
+2026-03-31 14:35:55,768 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-03-31 14:35:55,770 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-03-31 14:36:04,981 - INFO - Master encryption key securely wiped from RAM.
+2026-03-31 14:36:08,854 - INFO - SentinelsVault session ended.
+2026-03-31 14:36:08,854 - INFO - ==================================================

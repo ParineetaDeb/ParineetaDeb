@@ -1,0 +1,92 @@
+2026-04-04 09:16:11,626 - INFO - [PASS] G1 — StorageEngine does not import EncryptionProvider: storage_engine.py contains no reference to EncryptionProvider. Database layer is completely blind to encryption logic.
+2026-04-04 09:16:11,725 - INFO - [PASS] G1 — EncryptionProvider does not import StorageEngine: encryption_provider.py contains no database references. Crypto engine is completely blind to storage logic.
+2026-04-04 09:16:11,762 - INFO - [PASS] G1 — SentinelAuditor is fully independent: sentinel_auditor.py imports no other SentinelsVault modules. It operates purely on data passed to it — maximum isolation.
+2026-04-04 09:16:11,904 - INFO - [PASS] G1 — AuthManager does not import StorageEngine: auth_manager.py contains no database references. Authentication logic is completely decoupled from storage.
+2026-04-04 09:16:11,916 - WARNING - [FAIL] G1 — All 4 modules expose their defined public interfaces: Missing methods: SentinelAuditor.calculate_entropy() not found
+2026-04-04 09:16:11,931 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-04 09:16:11,931 - INFO - [PASS] G1 — EncryptionProvider stores key as private attribute (_key): Key is stored as self._key (private). External modules cannot access it by convention. This enforces encapsulation of the cryptographic secret.
+2026-04-04 09:16:11,931 - INFO - Master encryption key securely wiped from RAM.
+2026-04-04 09:16:11,932 - INFO - [PASS] G2 — No encryption key files exist on disk: No key files found on disk. Key material has never been written to non-volatile storage.
+2026-04-04 09:16:11,947 - INFO - [PASS] G2 — Database contains no raw session key column: vault_config columns: id, salt, master_hash, mfa_secret, created_at, recovery_salt, vault_key_enc_master, vault_key_nonce_master, vault_key_enc_recovery, vault_key_nonce_recovery, mfa_enabled, mfa_secret_enc, mfa_secret_nonce. No raw derived AES key column found. Key derivation happens at runtime in RAM only.
+2026-04-04 09:16:11,949 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-04 09:16:11,949 - INFO - Master encryption key securely wiped from RAM.
+2026-04-04 09:16:11,949 - INFO - [PASS] G2 — secure_wipe() removes key from RAM: Key existed in RAM before wipe. After secure_wipe(), self._key attribute is deleted. RAM location freed. No key fingerprint remains.
+2026-04-04 09:16:11,949 - INFO - AuthManager initialized with Argon2id configuration.
+2026-04-04 09:16:12,290 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-04-04 09:16:12,627 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-04-04 09:16:12,627 - INFO - [PASS] G2 — PBKDF2 key derivation is deterministic: Same password + same salt always produces same 32-byte key. Key length: 32 bytes = 256 bits. This means the key can always be re-derived at login without ever needing to store it.
+2026-04-04 09:16:12,628 - INFO - AuthManager initialized with Argon2id configuration.
+2026-04-04 09:16:12,971 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-04-04 09:16:13,321 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-04-04 09:16:13,321 - INFO - [PASS] G2 — Different salts produce different AES keys: Same password with different salts produces completely different 256-bit keys. This defeats Rainbow Table and pre-computation attacks.
+2026-04-04 09:16:13,322 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-04 09:16:13,322 - INFO - [PASS] G2 — Key is stored as raw bytes in RAM (not string/path): Type: bytes | Length: 32 bytes = 256 bits. Raw bytes cannot be accidentally serialized to a log file or printed to console as readable text.
+2026-04-04 09:16:13,322 - INFO - Master encryption key securely wiped from RAM.
+2026-04-04 09:16:13,322 - INFO - [PASS] G3 — StorageEngine.add_credential() accepts bytes (BLOB) not strings: Method signature: add_credential(self, site, user, pwd_blob, iv, cat, notes). Parameter 'pwd_blob' confirms only encrypted bytes are accepted. Plaintext strings are architecturally rejected.
+2026-04-04 09:16:13,322 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-04 09:16:13,324 - INFO - Encryption successful.
+2026-04-04 09:16:13,327 - INFO - Decryption and Integrity check successful.
+2026-04-04 09:16:13,327 - INFO - Master encryption key securely wiped from RAM.
+2026-04-04 09:16:13,327 - INFO - [PASS] G3 — Full pipeline: Encrypt -> SQLite BLOB -> Decrypt: Original: 'MyGitHubPassword@2024!' | Stored as: 38-byte BLOB | Decrypted: 'MyGitHubPassword@2024!' | Round-trip match: True. Plaintext never appeared in the database.
+2026-04-04 09:16:13,327 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-04 09:16:13,327 - INFO - Encryption successful.
+2026-04-04 09:16:13,327 - INFO - [PASS] G3 — Ciphertext contains no human-readable plaintext: Original string 'NetflixPassword99!' is completely absent from the 34-byte ciphertext. AES-256-GCM scrambles data into mathematically random bytes.
+2026-04-04 09:16:13,327 - INFO - Master encryption key securely wiped from RAM.
+2026-04-04 09:16:13,327 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-04 09:16:13,327 - INFO - Encryption successful.
+2026-04-04 09:16:13,328 - ERROR - Decryption/Integrity Check Failed. Data may be tampered.
+2026-04-04 09:16:13,328 - INFO - [PASS] G3 — GCM auth tag detects database tampering: Modified 1 byte of ciphertext. GCM authentication tag correctly rejected decryption. Any database tampering is cryptographically detected.
+2026-04-04 09:16:13,328 - INFO - Master encryption key securely wiped from RAM.
+2026-04-04 09:16:13,328 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-04 09:16:13,328 - INFO - Encryption successful.
+2026-04-04 09:16:13,328 - INFO - Encryption successful.
+2026-04-04 09:16:13,328 - INFO - [PASS] G3 — Same plaintext produces unique ciphertext each time: Encryption 1: IV=a08ab5c908a3df36... | Encryption 2: IV=184b5a525372d44d... | IVs differ: True | Ciphertexts differ: True. Unique IV per encryption prevents pattern analysis.
+2026-04-04 09:16:13,328 - INFO - Master encryption key securely wiped from RAM.
+2026-04-04 09:16:13,329 - INFO - [PASS] G3 — StorageEngine never calls encrypt() or decrypt(): storage_engine.py contains no encryption calls. It only stores and retrieves raw BLOB bytes. Encryption is 100% delegated to EncryptionProvider.
+2026-04-04 09:16:13,329 - INFO - Architecture Validation Complete — Passed: 17/18 (94.4%)
+2026-04-11 03:08:03,458 - INFO - [PASS] G1 — StorageEngine does not import EncryptionProvider: storage_engine.py contains no reference to EncryptionProvider. Database layer is completely blind to encryption logic.
+2026-04-11 03:08:03,487 - INFO - [PASS] G1 — EncryptionProvider does not import StorageEngine: encryption_provider.py contains no database references. Crypto engine is completely blind to storage logic.
+2026-04-11 03:08:03,495 - INFO - [PASS] G1 — SentinelAuditor is fully independent: sentinel_auditor.py imports no other SentinelsVault modules. It operates purely on data passed to it — maximum isolation.
+2026-04-11 03:08:03,600 - INFO - [PASS] G1 — AuthManager does not import StorageEngine: auth_manager.py contains no database references. Authentication logic is completely decoupled from storage.
+2026-04-11 03:08:03,600 - INFO - [PASS] G1 — All 4 modules expose their defined public interfaces: EncryptionProvider (5 methods), StorageEngine (11 methods), AuthManager (4 methods), SentinelAuditor (6 methods) — all interfaces verified.
+2026-04-11 03:08:03,602 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-11 03:08:03,602 - INFO - [PASS] G1 — EncryptionProvider stores key as private attribute (_key): Key is stored as self._key (private). External modules cannot access it by convention. This enforces encapsulation of the cryptographic secret.
+2026-04-11 03:08:03,602 - INFO - Master encryption key securely wiped from RAM.
+2026-04-11 03:08:03,602 - INFO - [PASS] G2 — No encryption key files exist on disk: No key files found on disk. Key material has never been written to non-volatile storage.
+2026-04-11 03:08:03,605 - INFO - [PASS] G2 — Database contains no raw session key column: vault_config columns: id, salt, master_hash, mfa_secret, created_at, recovery_salt, vault_key_enc_master, vault_key_nonce_master, vault_key_enc_recovery, vault_key_nonce_recovery, mfa_enabled, mfa_secret_enc, mfa_secret_nonce. No raw derived AES key column found. Key derivation happens at runtime in RAM only.
+2026-04-11 03:08:03,606 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-11 03:08:03,606 - INFO - Master encryption key securely wiped from RAM.
+2026-04-11 03:08:03,607 - INFO - [PASS] G2 — secure_wipe() removes key from RAM: Key existed in RAM before wipe. After secure_wipe(), self._key attribute is deleted. RAM location freed. No key fingerprint remains.
+2026-04-11 03:08:03,607 - INFO - AuthManager initialized with Argon2id configuration.
+2026-04-11 03:08:03,815 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-04-11 03:08:04,021 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-04-11 03:08:04,021 - INFO - [PASS] G2 — PBKDF2 key derivation is deterministic: Same password + same salt always produces same 32-byte key. Key length: 32 bytes = 256 bits. This means the key can always be re-derived at login without ever needing to store it.
+2026-04-11 03:08:04,021 - INFO - AuthManager initialized with Argon2id configuration.
+2026-04-11 03:08:04,231 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-04-11 03:08:04,440 - INFO - PBKDF2 key derivation complete (600000 iterations).
+2026-04-11 03:08:04,440 - INFO - [PASS] G2 — Different salts produce different AES keys: Same password with different salts produces completely different 256-bit keys. This defeats Rainbow Table and pre-computation attacks.
+2026-04-11 03:08:04,440 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-11 03:08:04,440 - INFO - [PASS] G2 — Key is stored as raw bytes in RAM (not string/path): Type: bytes | Length: 32 bytes = 256 bits. Raw bytes cannot be accidentally serialized to a log file or printed to console as readable text.
+2026-04-11 03:08:04,440 - INFO - Master encryption key securely wiped from RAM.
+2026-04-11 03:08:04,441 - INFO - [PASS] G3 — StorageEngine.add_credential() accepts bytes (BLOB) not strings: Method signature: add_credential(self, site, user, pwd_blob, iv, cat, notes). Parameter 'pwd_blob' confirms only encrypted bytes are accepted. Plaintext strings are architecturally rejected.
+2026-04-11 03:08:04,441 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-11 03:08:04,441 - INFO - Encryption successful.
+2026-04-11 03:08:04,441 - INFO - Decryption and Integrity check successful.
+2026-04-11 03:08:04,441 - INFO - Master encryption key securely wiped from RAM.
+2026-04-11 03:08:04,442 - INFO - [PASS] G3 — Full pipeline: Encrypt -> SQLite BLOB -> Decrypt: Original: 'MyGitHubPassword@2024!' | Stored as: 38-byte BLOB | Decrypted: 'MyGitHubPassword@2024!' | Round-trip match: True. Plaintext never appeared in the database.
+2026-04-11 03:08:04,442 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-11 03:08:04,442 - INFO - Encryption successful.
+2026-04-11 03:08:04,442 - INFO - [PASS] G3 — Ciphertext contains no human-readable plaintext: Original string 'NetflixPassword99!' is completely absent from the 34-byte ciphertext. AES-256-GCM scrambles data into mathematically random bytes.
+2026-04-11 03:08:04,442 - INFO - Master encryption key securely wiped from RAM.
+2026-04-11 03:08:04,442 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-11 03:08:04,442 - INFO - Encryption successful.
+2026-04-11 03:08:04,442 - ERROR - Decryption/Integrity Check Failed. Data may be tampered.
+2026-04-11 03:08:04,442 - INFO - [PASS] G3 — GCM auth tag detects database tampering: Modified 1 byte of ciphertext. GCM authentication tag correctly rejected decryption. Any database tampering is cryptographically detected.
+2026-04-11 03:08:04,442 - INFO - Master encryption key securely wiped from RAM.
+2026-04-11 03:08:04,442 - INFO - EncryptionProvider initialized with AES-256-GCM.
+2026-04-11 03:08:04,442 - INFO - Encryption successful.
+2026-04-11 03:08:04,442 - INFO - Encryption successful.
+2026-04-11 03:08:04,454 - INFO - [PASS] G3 — Same plaintext produces unique ciphertext each time: Encryption 1: IV=d7bf4ecd21ce4d36... | Encryption 2: IV=58a269d13bfab4c4... | IVs differ: True | Ciphertexts differ: True. Unique IV per encryption prevents pattern analysis.
+2026-04-11 03:08:04,454 - INFO - Master encryption key securely wiped from RAM.
+2026-04-11 03:08:04,455 - INFO - [PASS] G3 — StorageEngine never calls encrypt() or decrypt(): storage_engine.py contains no encryption calls. It only stores and retrieves raw BLOB bytes. Encryption is 100% delegated to EncryptionProvider.
+2026-04-11 03:08:04,455 - INFO - Architecture Validation Complete — Passed: 18/18 (100.0%)

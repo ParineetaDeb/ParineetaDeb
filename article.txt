@@ -1,0 +1,34 @@
+@article{akinlemi2026authenticated,
+  title={Design and implementation of an authenticated post-quantum session protocol using ML-KEM (Kyber), ML-DSA (Dilithium), and AES-256-GCM},
+  author={Akinlemi, Olushola and Meenakshi, S. P.},
+  journal={Frontiers in Physics},
+  volume={13},
+  year={2026},
+  doi={10.3389/fphy.2025.1723966}
+}
+
+@article{ulutas2025evaluation,
+  title={Evaluation of Password Hashing Competition Finalists: Performance, Security, Compliance Mapping, and Post-Quantum Readiness},
+  author={Ulutaş, Erdem and Celiktaş, Baris},
+  journal={Black Sea Journal of Engineering and Science},
+  volume={8},
+  number={6},
+  pages={1841--1855},
+  year={2025},
+  doi={10.34248/bsengineering.1670109}
+}
+
+@techreport{nist80038d,
+  title={Recommendation for Block Cipher Modes of Operation: Galois/Counter Mode (GCM) and GMAC},
+  author={National Institute of Standards and Technology},
+  number={SP 800-38D},
+  year={2007},
+  institution={NIST}
+}
+
+@misc{owasp2025password,
+  title={Password Storage Cheat Sheet},
+  author={OWASP Foundation},
+  year={2025},
+  howpublished={https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html}
+}

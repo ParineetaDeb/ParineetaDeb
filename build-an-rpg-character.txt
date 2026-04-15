@@ -1,0 +1,41 @@
+** start of main.py **
+
+def create_character(name, strength, intelligence, charisma):
+    # 1. Name Validations (Ensure NO periods at the end of strings)
+    if not isinstance(name, str):
+        return "The character name should be a string"
+    if name == "":
+        return "The character should have a name"
+    if len(name) > 10:
+        return "The character name is too long"
+    if " " in name:
+        return "The character name should not contain spaces"
+
+    # 2. Stat Type Validation
+    stats = [strength, intelligence, charisma]
+    if not all(isinstance(s, int) for s in stats):
+        return "All stats should be integers"
+
+    # 3. Stat Range Validations
+    if any(s < 1 for s in stats):
+        return "All stats should be no less than 1"
+    if any(s > 4 for s in stats):
+        return "All stats should be no more than 4"
+    
+    # 4. Total Point Validation
+    if sum(stats) != 7:
+        return "The character should start with 7 points"
+
+    # 5. Formatting (Ensures Test 11 and 12 remain passed)
+    # Using .join() ensures there is no hidden newline at the very end
+    lines = [
+        name,
+        f"STR {'●' * strength}{'○' * (10 - strength)}",
+        f"INT {'●' * intelligence}{'○' * (10 - intelligence)}",
+        f"CHA {'●' * charisma}{'○' * (10 - charisma)}"
+    ]
+    
+    return "\n".join(lines)
+
+** end of main.py **
+

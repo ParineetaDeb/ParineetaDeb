@@ -1,0 +1,33 @@
+** start of main.py **
+
+# 1-10: Variable Initializations (You can change these values to test)
+distance_mi = 5
+is_raining = False
+has_bike = True
+has_car = False
+has_ride_share_app = True
+# 11-13: Conditional Logic using boolean operators
+if not distance_mi:
+    # Handles falsy values (like 0)
+    print(False)
+elif distance_mi <= 1:
+    # Distance <= 1: True only if NOT raining
+    if not is_raining:
+        print(True)
+    else:
+        print(False)
+elif distance_mi <= 6:
+    # Distance > 1 and <= 6: True if has bike AND not raining
+    if has_bike and not is_raining:
+        print(True)
+    else:
+        print(False)
+else:
+    # Distance > 6: True if has car OR ride-share app
+    if has_car or has_ride_share_app:
+        print(True)
+    else:
+        print(False)  
+
+** end of main.py **
+
