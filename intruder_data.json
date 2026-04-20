@@ -1,0 +1,9 @@
+{
+  "failed_attempts": 0,
+  "lockout_until": 0,
+  "total_intrusions": 0,
+  "last_attempt_ts": 1776667136.648476,
+  "db_access_hash": "0b1fc209a6678827cee01392baf0170af92d3047d1a9fd61f4e75eb4f4c97d3b",
+  "alert_history": [],
+  "db_snapshot_time": 1776667064.5518117
+}
