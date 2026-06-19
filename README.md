@@ -23,3 +23,6 @@ Detailed technical documentation for this project can be found below:
 * **Language:** Python
 * **Database:** SQLite3
 * **Security:** Cryptography (AES-256, Argon2id, PBKDF2)
+
+## Google Skills Link
+https://www.skills.google/public_profiles/e6c8617f-eeee-4d9f-83de-72994a743217
