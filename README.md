@@ -15,9 +15,9 @@ You can click the Preview link to take a look at your changes.
 ## 📄 Documentation
 Detailed technical documentation for this project can be found below:
 
-* [System Requirements Specification (SRS)](./docs/sentinels-vault-srs.pdf)
-* [Data Flow Diagrams (DFD)](./docs/sentinels-vault-dfd.pdf)
-* [Software Design Document (SDD)](./docs/sentinels-vault-sdd.pdf)
+* [System Requirements Specification (SRS)](https://acrobat.adobe.com/id/urn:aaid:sc:AP:3141a134-d541-4630-a1fe-792f25a98cea)
+* [Data Flow Diagrams (DFD)](https://acrobat.adobe.com/id/urn:aaid:sc:AP:8fa2d16c-7dc8-457f-a155-c7827163a77d)
+* [Software Design Document (SDD)](https://acrobat.adobe.com/id/urn:aaid:sc:AP:26b55f45-61c2-4fa9-a6b3-b930f14df3ff)
 
 ## 🛠️ Tech Stack
 * **Language:** Python
